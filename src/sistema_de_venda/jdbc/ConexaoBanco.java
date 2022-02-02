@@ -6,9 +6,10 @@ import java.sql.DriverManager;
 import javax.swing.JOptionPane;
 
 public class ConexaoBanco {
-	public Connection conexao() {
+	public Connection pegarConexao() {
 		try {
 			return DriverManager.getConnection("jdbc:mysql://localhost/sistemasdevendas", "root",null);
+			
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, " Erro De Conexão " + e);
 
